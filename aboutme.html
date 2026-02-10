@@ -1,28 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Fabrizio Cosso">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabrizio Cosso</title>
+  <title>About me - Fabrizio Cosso</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --left-bg: #2f2f2f;
+      --left-bg-dark: #1f1f1f;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: radial-gradient(ellipse 150% 100% at 0% 0%, var(--left-bg-dark) 0%, var(--left-bg-dark) 40%, var(--left-bg) 80%);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+      margin-top: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: 100vh;
+    }
+
+    .left {
+      padding: 30px;
+      background-color: #2f2f2f;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse 150% 100% at 0% 0%, #1f1f1f 0%, #1f1f1f 40%, #2f2f2f 80%);
+      z-index: 0;
+    }
+
+    .left>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .right {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    .left img {
+      display: block;
+      margin: 20px 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .info-item:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-item i {
+      color: #A0A0A0;
+      font-size: 18px;
+      width: 24px;
+      text-align: center;
+    }
+
+    .info-item span {
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: none;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .profile-links {
+      margin-top: 12px;
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+
+    .profile-links a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="layout">
+    <aside class="left">
+      <img src="./Curriculum/Image/mia foto.jpg" alt="Foto di Fabrizio Cosso" width="200" height="200">
+      <p style="color:#f0f0f0;">Workforce Management Specialist con esperienza nella pianificazione operativa e
+        nell’analisi dei dati. Attualmente in formazione su automazione e sviluppo web.</p>
 
-  <h2>About me</h2>
+      <h2 style="color:#f0f0f0;">Informazioni personali</h2>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <span>cosso.fabrizio@tiscali.it</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-home"></i>
+        <span>Cagliari - Italy</span>
+      </div>
 
-  <p>
-    Professionista con esperienza nel Workforce Management e nella pianificazione operativa, con una forte
-    attitudine all’analisi dei dati e al miglioramento dei processi. Nel mio lavoro mi distinguo per un approccio
-    pragmatico e orientato alle soluzioni, supportando le decisioni attraverso informazioni chiare e strutturate.
-  </p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/fabrizio-cosso-6b6534376/" target="_blank"><img
+            src="./Curriculum/Image/linkedin.jpg" alt="LinkedIn" width="40" height="40"></a>
+        <a href="https://github.com/Fabryz84" target="_blank"><img src="./Curriculum/Image/GitHub_(8).png" alt="GitHub"
+            width="40" height="40"></a>
+      </div>
 
-  <p>
-    Attualmente sto ampliando le mie competenze nell’automazione e nello sviluppo web, con l’obiettivo di
-    integrare sempre di più tecnologia e operatività per aumentare l’efficienza dei sistemi in cui lavoro.
-    Credo nella formazione continua e nella capacità di evolversi professionalmente nel tempo.
-  </p>
+      <div class="profile-links">
+        <a href="./index.html">Home</a>
+        <a href="./contatti.html">Contatti</a>
+      </div>
+    </aside>
 
-</body>
+    <main class="right">
+      <h1>Profilo professionale</h1>
+      <p>
+        Sono Fabrizio Cosso, Workforce Management Specialist con esperienza nella pianificazione operativa,
+        nell’analisi dei dati e nell’ottimizzazione dei processi. Supporto le decisioni aziendali attraverso
+        informazioni strutturate, contribuendo a migliorare l’efficienza operativa e la qualità del servizio.
+      </p>
+
+      <p>
+        Nel corso della mia esperienza ho sviluppato competenze nella gestione dei volumi, nella pianificazione
+        delle risorse e nell’automazione delle attività, adottando un approccio pragmatico e orientato alle soluzioni.
+      </p>
+
+      <p>
+        Attualmente sto ampliando le mie competenze tecniche attraverso un percorso di formazione nello sviluppo
+        software,
+        con l’obiettivo di integrare sempre più tecnologia e operatività per migliorare le performance organizzative.
+      </p>
+
+      <h2>Obiettivi professionali</h2>
+      <ul>
+        <li>Utilizzare l’analisi dei dati per supportare decisioni strategiche e migliorare i processi operativi.</li>
+        <li>Progettare soluzioni di automazione per aumentare l’efficienza e ridurre le attività a basso valore.</li>
+        <li>Crescere in contesti orientati all’innovazione, contribuendo a progetti tecnologici e data-driven.</li>
+      </ul>
+
 
 </html>

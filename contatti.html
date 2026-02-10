@@ -1,21 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Fabrizio Cosso">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contatti Fabrizio Cosso</title>
+  <title>Contatti - Fabrizio Cosso</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --left-bg: #2f2f2f;
+      --left-bg-dark: #1f1f1f;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #8f0707 0%, #f0f0f0 50%);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+      margin-top: 30px;
+    }
+
+    img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: 100vh;
+    }
+
+    .left {
+      padding: 30px;
+      background-color: #2f2f2f;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse 150% 100% at 0% 0%, #1f1f1f 0%, #1f1f1f 40%, #2f2f2f 80%);
+      z-index: 0;
+    }
+
+    .left>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .right {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    .left img {
+      display: block;
+      margin: 20px 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .left img:hover {
+      transform: scale(1.05);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .info-item:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-item i {
+      color: #A0A0A0;
+      font-size: 18px;
+      width: 24px;
+      text-align: center;
+    }
+
+    .info-item strong {
+      color: #f0f0f0;
+    }
+
+    .info-item span {
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: none;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .profile-links {
+      margin-top: 12px;
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+
+    .profile-links a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    .profile-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Stili per la colonna destra (contatti) */
+    .contact-card {
+      background: #f7f9fb;
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      max-width: 540px;
+    }
+
+    .contact-card p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #333;
+    }
+
+    .contact-card p i {
+      color: #6b6b6b;
+      width: 22px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .contact-list {
+      margin-top: 12px;
+    }
+
+    .contact-list p {
+      margin: 8px 0;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="layout">
+    <aside class="left">
+      <img src="./Curriculum/Image/mia foto.jpg" alt="Foto di Fabrizio Cosso" width="200" height="200">
+      <p style="color:#f0f0f0;">Workforce Management Specialist con esperienza nella pianificazione operativa e
+        nell’analisi dei dati. Attualmente in formazione su automazione e sviluppo web.</p>
 
-  <h2>Contatti</h2>
+      <h2 style="color:#f0f0f0;">Informazioni personali</h2>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <span>cosso.fabrizio@tiscali.it</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-home"></i>
+        <span>Cagliari - Italy</span>
+      </div>
 
-  <p><strong>Email:</strong> <a href="cosso.fabrizio@tiscali.it">cosso.fabrizio@tiscali.it</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fabrizio-cosso-6b6534376/">Visita il mio
-      profilo</a></p>
-  <p><strong>Località:</strong> Cagliari, Italia</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/fabrizio-cosso-6b6534376/" target="_blank"><img
+            src="./Curriculum/Image/linkedin.jpg" alt="LinkedIn" width="40" height="40"></a>
+        <a href="https://github.com/Fabryz84" target="_blank"><img src="./Curriculum/Image/GitHub_(8).png" alt="GitHub"
+            width="40" height="40"></a>
+      </div>
 
+      <div class="profile-links">
+        <a href="./index.html">Home</a>
+        <a href="./aboutme.html">About me</a>
+      </div>
+    </aside>
+
+    <main class="right">
+      <h1>Contatti</h1>
+      <div class="contact-list">
+        <div class="contact-card">
+          <p><i class="fas fa-envelope"></i><strong>Email:</strong> <a
+              href="mailto:cosso.fabrizio@tiscali.it">cosso.fabrizio@tiscali.it</a></p>
+          <p><i class="fab fa-linkedin"></i><strong>LinkedIn:</strong> <a
+              href="https://www.linkedin.com/in/fabrizio-cosso-6b6534376/" target="_blank">Visita il mio profilo</a></p>
+          <p><i class="fab fa-github"></i><strong>GitHub:</strong> <a href="https://github.com/Fabryz84"
+              target="_blank">github.com/Fabryz84</a></p>
+          <p><i class="fas fa-map-marker-alt"></i><strong>Località:</strong> Cagliari, Italia</p>
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>
